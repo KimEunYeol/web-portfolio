@@ -1,0 +1,310 @@
+{% extends "base.html" %}
+{% block contents %}
+{% load static %}
+<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">About Me</h2>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="content" style="background-color: #f5f5f5;">
+	<section class="section-padding">
+		<div class="container">
+			<div class="row showcase-section">
+				<div class="col-md-6" style="width: 430px;">
+					<img src="{% static 'img/myface.jpg' %}" alt="showcase image">
+				</div>
+				<div class="col-md-6">
+					<div class="about-text">
+						<h3>Self <span class="color">Introduce</span></h3>
+						<p>안녕하세요 이건 첫번째 문단이고 내 소개를 줄줄줄 쓸예정이에오</p>
+						<p>보다시피 이건 두번쨰 문단이고 뭘 길게 적기에는 할말이 없녜요</p>
+						<p>안녕하세요 이건 첫번째 문단이고 내 소개를 줄줄줄 쓸예정이에오</p>
+						<p>보다시피 이건 두번쨰 문단이고 뭘 길게 적기에는 할말이 없녜요</p>
+						<p>안녕하세요 이건 첫번째 문단이고 내 소개를 줄줄줄 소개를 줄줄줄 소개를 줄줄줄 소개를 줄줄줄 소개를 줄줄줄 소개를 줄줄줄 쓸예정이에오</p>
+						<p>보다시피 이건 두번쨰 문단이고 뭘 길게 적기에는 할말이 없녜요</p>
+						<p>안녕하세요 이건 첫번째 문단이고 내 소개를 줄줄줄 쓸예정이에오</p>
+						<p>보다시피 이건 두번쨰 문단이고 뭘 길게 적기에는 할말이 없녜요</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="container">
+		<div class="about">
+			<div class="row">
+				<div style="margin-bottom: 100px;">
+					<div class="block-heading-two">
+						<h3><span>QnA</span></h3>
+					</div>
+					<!-- Accordion starts -->
+					<div class="panel-group" id="accordion-alt3">
+						<!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
+						<div class="panel">
+							<!-- Panel heading -->
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
+										<i class="fa fa-angle-right"></i> Q1 여자친구 있어요?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne-alt3" class="panel-collapse collapse">
+								<!-- Panel body -->
+								<div class="panel-body">
+									아니 없어요
+								</div>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
+										<i class="fa fa-angle-right"></i> Q2 없었어요?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo-alt3" class="panel-collapse collapse">
+								<div class="panel-body">
+									없어요
+								</div>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
+										<i class="fa fa-angle-right"></i> Q3 없었어요?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseThree-alt3" class="panel-collapse collapse">
+								<div class="panel-body">
+									아니 없어요 그냥
+								</div>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
+										<i class="fa fa-angle-right"></i> Q4
+									</a>
+								</h4>
+							</div>
+							<div id="collapseFour-alt3" class="panel-collapse collapse">
+								<div class="panel-body">
+									Sample
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Accordion ends -->
+				</div>
+				<!-- 
+				<div style="margin-bottom: 100px;">
+					<div class="block-heading-two">
+						<h3><span>Skills</span></h3>
+						<h4 style="
+    padding-top: 10px;
+    margin-bottom: 10px;
+"><span class="color">Front-End</span></h4>
+					</div> -->
+				<!-- Skills -->
+				<section id="content">
+					<div class="container content">
+						<!-- Service Blcoks -->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="about-logo">
+									<h3>Technical <span class="color">Skills</span></h3>
+									<h4 style="padding-top: 10px;margin-bottom: 10px;"><span class="color"><span
+												class="color">Front-End</span></h4>
+									<p>html 마크업 언어에 대한 이해를 하고 있으며 DOM구조에 대한 뭐 있음 그리구 css설정하는건 요즘 편집기가 좋아서 너무 꿀이야
+										js는 그냥 라이브러리 가져다와 쓰는건 하는데 직접짜는건 좀 무리야
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- Info Blcoks -->
+						<div class="row">
+							<div class="col-sm-4 info-blocks">
+								<!-- <i class="icon-info-blocks fa fa-bell-o"></i> -->
+								<i class="icon-info-blocks fa fa-html5"></i>
+								<div class="info-blocks-in">
+									<h3>HTML</h3>
+									<p>마크업 언어에대한 어느정도 이해가 있쥐</p>
+								</div>
+							</div>
+							<div class="col-sm-4 info-blocks">
+								<i class="icon-info-blocks fa fa-css3"></i>
+								<div class="info-blocks-in">
+									<h3>CSS</h3>
+									<p>꾸미기 재밌지</p>
+								</div>
+							</div>
+							<div class="col-sm-4 info-blocks">
+								<!-- <i class=""></i> -->
+								<i class="icon-info-blocks fa fab fa-js"></i>
+								<div class="info-blocks-in">
+									<h3>JavaScript</h3>
+									<p>스크립트 언어 어려워 그냥 갖다 쓰는게 최고야</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="about-logo">
+									<h4 style="padding-top: 10px;margin-bottom: 10px;"><span class="color"><span
+												class="color">Back-End</span></h4>
+									<p>python django로 REST ful 하게 웹페이지 만드는걸 주력으로 하고있지
+										그리고 서버사이드로 AWS와 Apache를 다루고 있구 raw SQL은 mySQL과 postGre를 하려구
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- Info Blcoks -->
+						<div class="row">
+							<div class="col-sm-4 info-blocks">
+								<i class="icon-info-blocks fa fab fa-python"></i>
+								<div class="info-blocks-in">
+									<h3>Python</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro
+										consequatur aliquam,
+										incidunt</p>
+								</div>
+							</div>
+							<div class="col-sm-4 info-blocks">
+								<i class="icon-info-blocks fa fa-database"></i>
+								<div class="info-blocks-in">
+									<h3>Database</h3>
+									<p>Mysql을 기본적으로 써왔고 DB에서 필요한 데이터를 select로 추출하는 프로시저는 작성할수있음
+										그리구 django는 postGre가 제일 호환이 좋다길래 이걸로 갈아타는중이야
+									</p>
+								</div>
+							</div>
+							<div class="col-sm-4 info-blocks">
+								<i class="icon-info-blocks fa fa-aws"></i>
+								<div class="info-blocks-in">
+									<h3>AWS</h3>
+									<p>그냥 배포용으로는 사용할수있는데 다른건 좀 어렵네</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="about-logo">
+									<h4 style="padding-top: 10px;margin-bottom: 10px;"><span class="color"><span
+												class="color">ETC</span></h4>
+									<p>협업툴 정도는 써야지? Git Hub이랑 영상편집을 위해 프리미어를 공부하고있어!
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- Info Blcoks -->
+						<div class="row">
+							<div class="col-sm-4 info-blocks">
+								<i class="icon-info-blocks fa fa-git-alt"></i>
+								<div class="info-blocks-in">
+									<h3>GitHub</h3>
+									<p>레포지토리 만들구 커밋하구 마스터 브랜치에서 서브브랜치 머지하고 정도는 할수있어</p>
+								</div>
+							</div>
+							<div class="col-sm-4 info-blocks">
+								<i class="icon-info-blocks fa fa-photo-video"></i>
+								<div class="info-blocks-in">
+									<h3>Adobe Premiere</h3>
+									<p>영상편집해서 간단한 유튜브 동영상을 제작하고있어</p>
+								</div>
+							</div>
+
+						</div>
+						<div>
+							<div class="block-heading-two">
+								<h4 style="padding-top: 30px;margin-bottom: 30px;"><span class="color">
+										Competency
+										<span class="color"></span></h4>
+							</div>
+							<h6>Front-End</h6>
+							<div class="progress pb-sm">
+								<!-- White color (progress-bar-white) -->
+								<div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40"
+									aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+									<span class="sr-only">40% Complete (success)</span>
+								</div>
+							</div>
+							<h6>Back-End</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="60"
+									aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+									<span class="sr-only">40% Complete (success)</span>
+								</div>
+							</div>
+							<h6>Cooperation</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="80"
+									aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+									<span class="sr-only">40% Complete (success)</span>
+								</div>
+							</div>
+							<h6>New technology</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="30"
+									aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+									<span class="sr-only">40% Complete (success)</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Info Blcoks -->
+					<!-- Info Blcoks -->
+					<!-- Vision -->
+					<div style="margin-top: 150px;">
+						<div class="block-heading-two">
+							<h3>My <span class="color">Vision</span></h3>
+						</div>
+					</div>
+					<img src="{% static 'img/vision-2.png' %}" style="display: block; margin: 0px auto;" alt="" />
+					<div>
+						<div class="testimonials">
+							<div class="active item">
+								<blockquote style="margin-bottom:80px; text-align:center; margin-left: 200px;margin-right: 200px;">
+									<p>적게일하고 많이벌고</p>
+									<p>김비전비전비전</p>
+									<p>비젼비젼비젼</p>
+									<p>비젼비젼비젼</p>
+									<p>비젼비젼비젼</p>
+								</blockquote>
+
+								<div class="block-heading-two">
+									<h3><span>Mentor & RoleModel</span></h3>
+								</div>
+
+								<div class="carousel-info">
+									<div class="row">
+										<img alt="" src="img/team4.jpg" class="pull-left" style="margin-left: 20px;">
+										<div class="pull-left" style="margin-right: 100px;">
+											<span class="testimonials-name">박유현 기술사(PWC)</span>
+											<span class="testimonials-post">"은열이는 참 열심히해요~"</span>
+										</div>
+										<img alt="" src="img/team4.jpg" class="pull-left" style="margin-left: 20px;">
+										<div class="pull-left" style="margin-right: 100px;">
+											<span class="testimonials-name">박은정 교수(UST)</span>
+											<span class="testimonials-post">"은열이는 참 잘해요~"</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+
+</html>
+{% endblock %}

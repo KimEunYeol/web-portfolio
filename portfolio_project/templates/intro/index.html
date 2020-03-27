@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+{% block contents %}
+{% load static %}
+<!-- Slider -->
+<div id="main-slider" class="flexslider">
+	<ul class="slides">
+		<li>
+			<img src="{% static 'img/slides/1.jpg' %}" alt="" />
+			<div class="flex-caption">
+				<h3>안녕하세요! 웹 브라우저로 사람을 연결하는 개발자 김은열 입니다</h3>
+				<h4>Hello! I am Eun-yeol Kim, a developer who connects people with a web browser</h4>
+			</div>
+		</li>
+		<li>
+			<img src="{% static 'img/slides/2.jpg' %}" alt="" />
+			<div class="flex-caption">
+				<h3>Python Django를 활용해 웹 애플리캐이션을 구축합니다</h3>
+				<h4>Build web applications using Python Django</h4>
+			</div>
+		</li>
+		<li>
+			<img src="{% static 'img/slides/1.jpg' %}" alt="" />
+			<div class="flex-caption">
+				<h3>Clean Code를 위해 테스트 주도 개발을 지향합니다</h3>
+				<h4>Build web applications using Python Django</h4>
+			</div>
+		</li>
+		<li>
+			<img src="{% static 'img/slides/2.jpg' %}" alt="" />
+			<div class="flex-caption">
+				<h3>클라우드 플랫폼과 인공지능 개발 플랫폼에 관심을 갖고 있습니다</h3>
+				<h4>Build web applications using Python Django</p>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- end slider -->
+</section>
+
+<section class="dishes">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="aligncenter">
+					<h2 class="aligncenter">ABOUT ME</h2>안녕하세요 <br />이 쓉새들아
+				</div>
+				<br />
+			</div>
+		</div>
+
+		<div class="row service-v1 margin-bottom-40">
+			<div class="col-md-4 md-margin-bottom-40">
+				<div class="card small">
+					<div class="card-image">
+
+						<img class="img-responsive" src="{% static 'img/note_taking.png' %}" alt="">
+						<span class="card-title">Vision</span>
+					</div>
+					<div class="card-content">
+						<p>
+							내 이력을 좀 쳐봐
+						</p>
+						<p>
+							느그 회사에 들어갈수 있을지 없을지 아직 감이 안와?
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 md-margin-bottom-40">
+				<div class="card small">
+					<div class="card-image">
+						<img class="img-responsive" src="{% static 'img/job_interview_.png' %}" alt="" />
+						<span class="card-title">Self Interview</span>
+					</div>
+					<div class="card-content">
+						<p>
+							그 예전에 많이 하던 100문 100답 같은거 해줄게
+						</p>
+						<p>
+							너도 좋지?
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 md-margin-bottom-40">
+				<div class="card small">
+					<div class="card-image">
+						<img class="img-responsive" src="{% static 'img/web_developer.png' %}" alt="">
+						<span class="card-title">Technical Skills</span>
+					</div>
+					<div class="card-content">
+						<p>
+							백엔드는 대강 mysql, postgre 할줄 알고 apach조금 만지구
+						</p>
+						<p>
+							요즘 AWS랑 docker 쓰려고 노력중이야 그리구 하둡도 할껀데 배울게 왜이래 많냐 시발
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="{% url 'about' %}" class="btn btn-primary waves-effect waves-dark">More..</a>
+	</div>
+</section>
+<section id="content" style="padding-bottom: 50px;">
+	<div class="container">
+		<section class="services">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="aligncenter">
+						<h2 class="aligncenter">PROJECT</h2>여태까지 내가 비볐던 공모전이랑 프로젝트를 알려줄게
+						<br />생각보다 많아서 다보려면 하루가 훌쩍 넘어갈걸?
+					</div>
+					<br />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4 info-blocks">
+					
+					<i class="icon-info-blocks material-icons">local_parking</i>
+					<div class="info-blocks-in">
+						<h3>Python Django</h3>
+						<p>독학으로 늦게 배워 공모전 나갈 시간이 없었어 그래서 이게 내 첫번째 프로젝트야</p>
+					</div>
+				</div>
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks material-icons">lightbulb_outline</i>
+					<div class="info-blocks-in">
+						<h3>사물인터넷</h3>
+						<p>랩실애들이랑 핸드리모트컨트롤러 뚝딱 만들었는데 상을 2개나 탔어 개꿀이였지</p>
+					</div>
+				</div>
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks material-icons">streetview</i>
+					<div class="info-blocks-in">
+						<h3>인공지능</h3>
+						<p>동국대가서 한여름에 개뺑이 까고왔는데 후회도 많고 배운것도 많았어</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks material-icons">assessment</i>
+					<div class="info-blocks-in">
+						<h3>빅데이터</h3>
+						<p>이거 사실 졸업한 내친구한테 그대로 받아서 리팩토링한거야 그래서 잘몰라</p>
+					</div>
+				</div>
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks material-icons">monetization_on</i>
+					<div class="info-blocks-in">
+						<h3>블록체인</h3>
+						<p>비트코인하다가 많이 잃었지? 나는 진로를 잃었었어 시2발</p>
+					</div>
+				</div>
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks material-icons">line_style</i>
+					<div class="info-blocks-in">
+						<h3>공공데이터</h3>
+						<p>한국정보화진흥원알아? NIS 거기서 방학때 공공데이터로 앱만들었엉</p>
+					</div>
+				</div>
+			</div>
+			<a href="{% url 'project' %}" class="btn btn-primary waves-effect waves-dark">More.. </a>
+
+		</section>
+	</div>
+</section>
+
+<section class="section-padding gray-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-title text-center">
+					<h2>BLOG</h2>
+					<p>이건 필수지 django로 블로그나 쇼핑몰 못만들면 안되잖어<br>대략 너희가 필수요건에 적어놓은거 공부한 내용 포스팅할려구</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="about-text">
+					<p>django를 활용해서 Blog를 만들고 회원가입 시에 포스팅 할수 있는 권한을 줄수 있게 만들려 생각중이야
+						이미지 업로드도 할수있게 만들거야
+						그리고 RESTful API로 blog data를 비동기적으로 처리할수 있게 만들어줄게
+						어때 맘에들지?
+					</p>
+
+					<ul class="withArrow">
+						<li><span class="fa fa-angle-right"></span> 최근 글 1_TITLE </li>
+						<li><span class="fa fa-angle-right"></span> 최근 글 2_TITLE </li>
+						<li><span class="fa fa-angle-right"></span> 최근 글 3_TITLE </li>
+						<li><span class="fa fa-angle-right"></span> 최근글이 링크로 걸리는 기능을 만들고 싶어 </li>
+					</ul>
+					<a href="{% url 'blog' %}" class="btn btn-primary waves-effect waves-dark">More.. </a>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="about-image">
+					<img src="{% static 'img/notes-2.png' %}" alt="About Images">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock contents %}
