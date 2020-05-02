@@ -1,0 +1,22 @@
+{% extends "base_simple.html" %}
+{% load static %}
+
+{% block contents %}
+
+<div class="container">
+    <div class="row">
+        <img class="img-user" src="{% static 'img/success.png' %}" alt="">
+        <div class="col-md-12">
+            <div class="about-logo">
+                <h3>Sign Up<span class="color"> Completed!</span></h3>
+                <p>회원가입이 정상적으로 완료되었습니다</p>
+            </div>
+        </div>
+    </div>
+    <div style="display: table; margin-top: 20px; margin-bottom: 30px; margin-left: auto; margin-right: auto;" value="Login">
+        <input type="button" class="btn btn-primary waves-effect waves-dark"  value="로그인"
+        onClick="location.href='{% url 'login' %}'" />
+    </div>
+    
+</div>
+{% endblock %}
