@@ -44,8 +44,17 @@
 					<div class="col-sm-9">
 						<div class="row">
 							<ul class="info">
-								<li><i class="icon-info-blocks material-icons">power_settings_new</i><a href="{% url 'login' %}" style="color: #fff;">Login</a></li>
-								<li><i class="icon-info-blocks material-icons">person_add</i><a href="{% url 'signup' %}" style="color: #fff;">Sign up</a></li>
+								{% if user.username %}
+								<li><i class="icon-info-blocks material-icons">exit_to_app</i><a
+										href="{% url 'logout' %}" style="color: #fff;">Logout</a></li>
+								<li><i class="icon-info-blocks material-icons">face</i><a
+										href="{% url 'mypage' %}" style="color: #fff;">{{ user.name }} 님</a></li>
+								{% else %}
+								<li><i class="icon-info-blocks material-icons">power_settings_new</i><a
+										href="{% url 'login' %}" style="color: #fff;">Login</a></li>
+								<li><i class="icon-info-blocks material-icons">person_add</i><a
+										href="{% url 'signup' %}" style="color: #fff;">Sign up</a></li>
+								{% endif %}
 							</ul>
 							<div class="clr"></div>
 						</div>
@@ -98,10 +107,12 @@
 							<li><a class="waves-effect waves-dark" href="{% url 'about' %}">Introduce</a></li>
 							<li><a class="waves-effect waves-dark" href="{% url 'project' %}">Project</a></li>
 							<li class="dropdown">
-								<a href="#" data-toggle="dropdown" class="dropdown-toggle waves-effect waves-dark">Blog<b class="caret"></b></a>
+								<a href="#" data-toggle="dropdown"
+									class="dropdown-toggle waves-effect waves-dark">Blog<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li><a class="waves-effect waves-dark" href="{% url 'blog' %}">Post</a></li>
-									<li><a class="waves-effect waves-dark" href="{% url 'guestbook' %}">Guest Book</a></li>
+									<li><a class="waves-effect waves-dark" href="{% url 'guestbook' %}">Guest Book</a>
+									</li>
 								</ul>
 							</li>
 							<li><a class="waves-effect waves-dark" href="{% url 'demo' %}">Demo</a></li>
@@ -112,7 +123,6 @@
 			</div>
 		</header>
 		<!-- end header -->
-		<section id="banner">
 
 		{% block contents %}
 		{% endblock %}
@@ -126,7 +136,7 @@
 						<div class="row" style="margin-bottom: 0px;">
 							<ul class="info">
 								<li><i class="icon-info-blocks material-icons">question_answer</i><span>
-										&nbsp;kimeunyeo23@gmail.com</span></li>
+										&nbsp;kimeunyeol23@gmail.com</span></li>
 								<li><i class="icon-info-blocks material-icons">perm_phone_msg</i><span>&nbsp;+82-10 4171
 										0223</span></li>
 								<br>

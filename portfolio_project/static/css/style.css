@@ -1935,3 +1935,10 @@ header .navbar {
     line-height: 50px;
     padding-left: 18px;
 }
+
+.img-user{
+	display: block;
+    max-width: 60%;
+    height: auto;
+    margin: 0px auto;
+}
