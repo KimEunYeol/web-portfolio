@@ -157,4 +157,3 @@ TAGGIT_LIMIT = 50
 # 새로운 도메인을 할당받거나 DNS를 이용할경우 변경해줘야한다
 DISQUS_SHORTNAME = 'kimeunyeol-website'
 DISQUS_MY_DOMAIN = 'http://127.0.0.1:8000/'
-    

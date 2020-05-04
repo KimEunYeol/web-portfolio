@@ -293,3 +293,4 @@ function login() {
 
 	$('#login_form').submit();
 }
+

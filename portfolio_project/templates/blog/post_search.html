@@ -2,10 +2,10 @@
 {% load widget_tweaks %}
 {% load static %}
 {% block contents %}
+<a href="{% url 'main' %}"><img class="img-user" src="{% static 'img/search.png' %}" alt=""></a>
 
 <h1>Blog Search</h1>
 <br>
-
 <form class="form-inline" action="." method="post"> {% csrf_token %}
     <div class="form-group">
         {{ form.search_word|add_label_class:"font-weight-bold" }}
@@ -13,7 +13,6 @@
         <input type="submit" value="Submit" class="btn btn-primary btn-sm" />
     </div>
 </form>
-
 <br /><br />
 
 {% if object_list %}
