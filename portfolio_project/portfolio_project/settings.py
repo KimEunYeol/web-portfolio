@@ -43,6 +43,8 @@ INSTALLED_APPS += [
     'user',
     'blog',
     'demo',
+    'guestbook',
+
     'taggit',
     'taggit_templatetags2',
     'widget_tweaks',
@@ -130,25 +132,29 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
 STATIC_URL = '/static/'
-
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
-
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
+# img 파일 처리를 위한 경로설정
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 MEDIA_URL = '/media/'
 
 
+# User 및 Login/out 시 경로 설정 변수
 AUTH_USER_MODEL = 'user.User'
-
 LOGIN_REDIRECT_URL = '/'
-
 LOGOUT_REDIRECT_URL = '/'
 
+# Tag 패키지 상용을 위한 환경변수 설정
+TAGGIT_CASE_INSENSITIVE = True
+TAGGIT_LIMIT = 50
+
+# 댓글 사용을 위한 DISQUS 환경변수 설정
+# 새로운 도메인을 할당받거나 DNS를 이용할경우 변경해줘야한다
+DISQUS_SHORTNAME = 'kimeunyeol-website'
+DISQUS_MY_DOMAIN = 'http://127.0.0.1:8000/'
+    

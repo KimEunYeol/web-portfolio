@@ -1,0 +1,17 @@
+{% extends "base_simple.html" %}
+{% block contents %}
+{% load static %}
+<a href="{% url 'main' %}"><img class="img-user" src="{% static 'img/demo.png' %}" alt=""></a>
+<h1>Blog Tag Cloud</h1>
+<br>
+
+<div class="tag-cloud">
+    {% load taggit_templatetags2_tags %}
+    {% get_tagcloud as tags %}
+    {% for tag in tags %}
+    <span class="tag-{{tag.weight|floatformat:0}}">
+        <a href="{% url 'tagged_object_list' tag.name %}"> {{tag.name}}({{tag.num_times}})</a>
+    </span>
+    {% endfor %}
+</div>
+{% endblock %}
