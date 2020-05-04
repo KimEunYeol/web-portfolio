@@ -1942,3 +1942,34 @@ header .navbar {
     height: auto;
     margin: 0px auto;
 }
+
+.page-object{
+	display:table;
+	margin-left:auto;
+	margin-right:auto; 
+	font-weight: bold; 
+	font-size: 1.3em;
+}
+
+.post-body {
+    width: 80%;
+    margin: auto;
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Tag 관련 css */
+.tag-cloud {
+    width: 40%;
+    margin-left: 30px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid orange;
+    background-color: #ffc;
+}
+.tag-1 {font-size: 12px;}
+.tag-2 {font-size: 14px;}
+.tag-3 {font-size: 16px;}
+.tag-4 {font-size: 18px;}
+.tag-5 {font-size: 20px;}
+.tag-6 {font-size: 24px;}

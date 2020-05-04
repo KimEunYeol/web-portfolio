@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+{% block head %}
+<!-- Vendor Styles -->
+<link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+<!-- Block Styles -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+<link href="{% static 'css/gallery-1.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block contents %}
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="pageTitle">KEY's Blog</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="content">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-logo">
+                    <h3>My <span class="color">Blog</span></h3>
+                    <p>뭐 대충 좀 너희 회사랑 관련된 기술과 산업동향 및 개발에 필요한 것들을 일목요연하게 포스팅해줄게</p>
+                    <p>그리고 덤으로 내가 이 포트폴리오를 하면서 알게된 수많은것들도 함꼐 올려줄게</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div style="margin-top: 40px;" class="editContent page-object">
+    <ul class="filter">
+        <li class="active"><a href="#" data-filter="*">All</a></li>
+        {% load taggit_templatetags2_tags %}
+        {% get_tagcloud as tags %}
+        {% for tag in tags %}
+        <li><a class="waves-effect waves-dark tag-{{tag.weight|floatformat:0}}" href=""
+                data-filter=".{{tag.name}}">{{tag.name}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<br>
+<!-- Start Gallery 1-2 -->
+<section id="gallery-1" class="content-block section-wrapper gallery-1">
+    <div class="container">
+        <!-- /.gallery-filter -->
+        <div class="row">
+            <div id="isotope-gallery-container">
+                {% for post in posts %}
+                {% load taggit_templatetags2_tags %}
+                {% get_tags_for_object post as "tags" %}
+                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper 
+                {% for tag in tags %} {{ tag.name }} {% endfor %} ">
+                    <div class="gallery-item">
+                        <div class="gallery-thumb">
+                            {% if post.image %}
+                            <img src="{{ post.image.url }}" class="img-responsive"
+                                onerror="this.src='{% static 'img/nothumb.png' %}'" alt="Thumbnail Img" />
+                            <div class="image-overlay"></div>
+                            <a href="{{ post.image.url }}" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                            {% else %}
+                            <img src="{% static 'img/nothumb.png' %}" class="img-responsive" alt="Thumbnail Img" />
+                            {% endif %}
+                        </div>
+                        <div class="gallery-details">
+                            <div class="editContent">
+                                <h5><a style="color: #444;" href='{{ post.get_absolute_url }}'>{{ post.title }}</a></h5>
+                            </div>
+                            <div class="editContent">
+                                <p>{{ post.create_dt|date:'Y / m / d' }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+
+<div>
+    <span class="page-object">
+        {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">◀&ensp;</a>
+        {% endif %}
+        {{ page_obj.number }} OF {{ page_obj.paginator.num_pages }}
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">&ensp;▶</a>
+        {% endif %}
+    </span>
+</div>
+<br>
+
+<div class="page-object">
+    <form class="form-inline my-2" action="{% url 'search' %}" method="post"> {% csrf_token %}
+        <input class="form-control mr-sm-2" type="search" placeholder="Search.." name="search_word">
+    </form>
+</div>
+<br>
+{% endblock %}

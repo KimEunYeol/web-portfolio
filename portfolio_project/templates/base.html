@@ -47,8 +47,8 @@
 								{% if user.username %}
 								<li><i class="icon-info-blocks material-icons">exit_to_app</i><a
 										href="{% url 'logout' %}" style="color: #fff;">Logout</a></li>
-								<li><i class="icon-info-blocks material-icons">face</i><a
-										href="{% url 'mypage' %}" style="color: #fff;">{{ user.name }} 님</a></li>
+								<li><i class="icon-info-blocks material-icons">face</i><a href="{% url 'mypage' %}"
+										style="color: #fff;">{{ user.name }} 님</a></li>
 								{% else %}
 								<li><i class="icon-info-blocks material-icons">power_settings_new</i><a
 										href="{% url 'login' %}" style="color: #fff;">Login</a></li>
@@ -110,7 +110,7 @@
 								<a href="#" data-toggle="dropdown"
 									class="dropdown-toggle waves-effect waves-dark">Blog<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a class="waves-effect waves-dark" href="{% url 'blog' %}">Post</a></li>
+									<li><a class="waves-effect waves-dark" href="{% url 'post_list' %}">Post</a></li>
 									<li><a class="waves-effect waves-dark" href="{% url 'guestbook' %}">Guest Book</a>
 									</li>
 								</ul>
@@ -197,6 +197,9 @@
 	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 	<script src="{% static 'js/animate.js' %}"></script>
 	<script src="{% static 'js/custom.js' %}"></script>
+
+	{% block extra-scripts %}
+	{% endblock %}
 </body>
 
 </html>

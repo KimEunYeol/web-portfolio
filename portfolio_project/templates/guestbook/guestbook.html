@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block contents %}
+{% load static %}
+<a href="{% url 'main' %}"><img class="img-user" src="{% static 'img/guestbook.png' %}" alt=""></a>
+{% endblock %}
