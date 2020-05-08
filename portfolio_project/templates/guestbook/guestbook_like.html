@@ -1,0 +1,19 @@
+<form action="" method="POST" data-type="like" data-id="{{ guestbook_post_id }}">
+	<input type="hidden" name="guestbook_post_id" value="{{ guestbook_post_id }}" />
+	{% csrf_token %}
+	<div class="row">
+		<div class="col-12 center">
+			<div class="like-box {% if user_count == 1 %}like-tag-2{% else %}like-tag-1{% endif %}"
+				onClick="likeClick({{ guestbook_post_id }})">
+				<div class="row" style="height: 100%">
+					<div class="col-6 like-text" style="padding: 0">
+						<div class="like-contents"><i class="icon-info-blocks material-icons">thumb_up</i></div>
+					</div>
+					<div class="col-6 like-count" style="padding: 0">
+						<div class="like-contents">{{ like_count }}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

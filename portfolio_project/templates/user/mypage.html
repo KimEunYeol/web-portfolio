@@ -1,7 +1,6 @@
 {% extends "base_simple.html" %}
-{% block contents %}
 {% load static %}
-
+{% block contents %}
 <div class="container">
     <div class="row">
         <img class="img-user" src="{% static 'img/mypage.png' %}" alt="">
@@ -72,4 +71,7 @@
         </div>
     </form>
 </div>
+{% block extra-scripts %}
+<script src="{% static 'js/user.js' %}"></script>
+{% endblock %}
 {% endblock %}

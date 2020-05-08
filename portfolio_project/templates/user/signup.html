@@ -1,7 +1,7 @@
 {% extends "base_simple.html" %}
 {% load widget_tweaks %}
-{% block contents %}
 {% load static %}
+{% block contents %}
 <div class="container">
     <div class="row">
         <img class="img-user" src="{% static 'img/sign up-2.png' %}" alt="">
@@ -30,7 +30,6 @@
                         class="btn btn-primary waves-effect waves-dark pull-right" />
                     <p class="help-block"><span id="idcheck-result"></span></p>
                 </div>
-
 
                 <div class="input-field">
                     <input type="password" class="form-control" name="password" id="password" value="" required
@@ -69,5 +68,7 @@
         </div>
     </div>
 </div>
-
+{% block extra-scripts %}
+<script src="{% static 'js/user.js' %}"></script>
+{% endblock %}
 {% endblock %}
