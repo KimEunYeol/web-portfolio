@@ -1973,3 +1973,35 @@ header .navbar {
 .tag-4 {font-size: 18px;}
 .tag-5 {font-size: 20px;}
 .tag-6 {font-size: 24px;}
+
+
+/* Guest book css*/
+.write-box {
+	display: block;
+	vertical-align: middle;
+	background: #EEEEEE;
+	padding: 10px;
+}
+
+.height-080 { height: 80px; }
+
+.center { text-align: center; }
+
+.margin-10 { margin: 10px; }
+
+.middle {
+	position: relative;
+	top: 50%;
+	-ms-transform: translate(0%, -50%);
+	transform: translate(0%, -50%);
+}
+
+.row.block-center {
+	justify-content: center;
+}
+
+.board .row > * {
+	padding: 10px;
+}
+
+.filebox input[type="file"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0; }

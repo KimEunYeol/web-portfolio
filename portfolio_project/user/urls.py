@@ -1,7 +1,10 @@
 from django.urls import path, include
 from django.contrib.auth import views as UserViews
 
-from .views import signup, signup_idcheck, signup_result, signup_completed, error, UserLoginView, UserMypageView, UserPasswordChangedView
+from .views import (
+	signup, signup_idcheck, signup_result, signup_completed, error,
+	UserLoginView, UserMypageView, UserPasswordChangedView
+)
 
 
 urlpatterns = [

@@ -69,9 +69,9 @@ def signup_result(request):
 	return redirect(redirection_page)
 
 
-def error(request):
-    return render(request, 'error.html')
-
-
 def signup_completed(request):
 	return render(request, 'user/signup_completed.html')
+
+
+def error(request):
+    return render(request, 'error.html')

@@ -1,8 +1,6 @@
 {% extends "base_simple.html" %}
 {% load static %}
-
 {% block contents %}
-
 <div class="container">
     <div class="row">
         <img class="img-user" src="{% static 'img/success.png' %}" alt="">
@@ -17,6 +15,8 @@
         <input type="button" class="btn btn-primary waves-effect waves-dark"  value="로그인"
         onClick="location.href='{% url 'login' %}'" />
     </div>
-    
 </div>
+{% block extra-scripts %}
+<script src="{% static 'js/user.js' %}"></script>
+{% endblock %}
 {% endblock %}
