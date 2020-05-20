@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>KEY's Portfolio for SunTech</title>
+	<title>KEY's Web Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="" />
 	<meta name="author" content="kimeunyeol" />
@@ -94,8 +94,7 @@
 						">
 							<div class="typing-txt">
 								<ul style="display: none;">
-									<li>&lt;KEY's&nbsp;Potfolio/&gt;</li>
-									<li>&lt;For&nbsp;SunTech/&gt;</li>
+									<li>&lt;KEY's&nbsp;Portfolio/&gt;</li>
 								</ul>
 							</div>
 							<p class="typing"></p>
@@ -103,12 +102,14 @@
 					</div>
 					<div class="navbar-collapse collapse ">
 						<ul class="nav navbar-nav">
-							<li class="active"><a class="waves-effect waves-dark" href="{% url 'main' %}">Home</a></li>
-							<li><a class="waves-effect waves-dark" href="{% url 'about' %}">Introduce</a></li>
-							<li><a class="waves-effect waves-dark" href="{% url 'project' %}">Project</a></li>
-							<li class="dropdown">
+							
+							
+							<li {% block intro %} {% endblock %}><a class="waves-effect waves-dark" href="{% url 'main' %}">Home</a></li>
+							<li {% block about %} {% endblock %} ><a class="waves-effect waves-dark" href="{% url 'about' %}">Introduce</a></li>
+							<li {% block project %} {% endblock %}><a class="waves-effect waves-dark" href="{% url 'project' %}">Project</a></li>
+							<li class="dropdown {% block blog %} {% endblock %} ">
 								<a href="#" data-toggle="dropdown"
-									class="dropdown-toggle waves-effect waves-dark">Blog<b class="caret"></b></a>
+								class="dropdown-toggle waves-effect waves-dark">Blog<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li><a class="waves-effect waves-dark" href="{% url 'post_list' %}">Post</a></li>
 									<li><a class="waves-effect waves-dark" href="{% url 'guestbook' %}">Guest Book</a>
