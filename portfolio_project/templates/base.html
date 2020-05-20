@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>KEY's Portfolio for SunTech</title>
+	<title>KEY's Web Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="" />
 	<meta name="author" content="kimeunyeol" />
@@ -44,8 +44,17 @@
 					<div class="col-sm-9">
 						<div class="row">
 							<ul class="info">
-								<li><i class="icon-info-blocks material-icons">power_settings_new</i><a href="{% url 'login' %}" style="color: #fff;">Login</a></li>
-								<li><i class="icon-info-blocks material-icons">person_add</i><a href="{% url 'signup' %}" style="color: #fff;">Sign up</a></li>
+								{% if user.username %}
+								<li><i class="icon-info-blocks material-icons">exit_to_app</i><a
+										href="{% url 'logout' %}" style="color: #fff;">Logout</a></li>
+								<li><i class="icon-info-blocks material-icons">face</i><a href="{% url 'mypage' %}"
+										style="color: #fff;">{{ user.name }} 님</a></li>
+								{% else %}
+								<li><i class="icon-info-blocks material-icons">power_settings_new</i><a
+										href="{% url 'login' %}" style="color: #fff;">Login</a></li>
+								<li><i class="icon-info-blocks material-icons">person_add</i><a
+										href="{% url 'signup' %}" style="color: #fff;">Sign up</a></li>
+								{% endif %}
 							</ul>
 							<div class="clr"></div>
 						</div>
@@ -85,8 +94,7 @@
 						">
 							<div class="typing-txt">
 								<ul style="display: none;">
-									<li>&lt;KEY's&nbsp;Potfolio/&gt;</li>
-									<li>&lt;For&nbsp;SunTech/&gt;</li>
+									<li>&lt;KEY's&nbsp;Portfolio/&gt;</li>
 								</ul>
 							</div>
 							<p class="typing"></p>
@@ -94,14 +102,18 @@
 					</div>
 					<div class="navbar-collapse collapse ">
 						<ul class="nav navbar-nav">
-							<li class="active"><a class="waves-effect waves-dark" href="{% url 'main' %}">Home</a></li>
-							<li><a class="waves-effect waves-dark" href="{% url 'about' %}">Introduce</a></li>
-							<li><a class="waves-effect waves-dark" href="{% url 'project' %}">Project</a></li>
-							<li class="dropdown">
-								<a href="#" data-toggle="dropdown" class="dropdown-toggle waves-effect waves-dark">Blog<b class="caret"></b></a>
+							
+							
+							<li {% block intro %} {% endblock %}><a class="waves-effect waves-dark" href="{% url 'main' %}">Home</a></li>
+							<li {% block about %} {% endblock %} ><a class="waves-effect waves-dark" href="{% url 'about' %}">Introduce</a></li>
+							<li {% block project %} {% endblock %}><a class="waves-effect waves-dark" href="{% url 'project' %}">Project</a></li>
+							<li class="dropdown {% block blog %} {% endblock %} ">
+								<a href="#" data-toggle="dropdown"
+								class="dropdown-toggle waves-effect waves-dark">Blog<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a class="waves-effect waves-dark" href="{% url 'blog' %}">Post</a></li>
-									<li><a class="waves-effect waves-dark" href="{% url 'guestbook' %}">Guest Book</a></li>
+									<li><a class="waves-effect waves-dark" href="{% url 'post_list' %}">Post</a></li>
+									<li><a class="waves-effect waves-dark" href="{% url 'guestbook' %}">Guest Book</a>
+									</li>
 								</ul>
 							</li>
 							<li><a class="waves-effect waves-dark" href="{% url 'demo' %}">Demo</a></li>
@@ -112,7 +124,6 @@
 			</div>
 		</header>
 		<!-- end header -->
-		<section id="banner">
 
 		{% block contents %}
 		{% endblock %}
@@ -126,7 +137,7 @@
 						<div class="row" style="margin-bottom: 0px;">
 							<ul class="info">
 								<li><i class="icon-info-blocks material-icons">question_answer</i><span>
-										&nbsp;kimeunyeo23@gmail.com</span></li>
+										&nbsp;kimeunyeol23@gmail.com</span></li>
 								<li><i class="icon-info-blocks material-icons">perm_phone_msg</i><span>&nbsp;+82-10 4171
 										0223</span></li>
 								<br>
@@ -187,6 +198,10 @@
 	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 	<script src="{% static 'js/animate.js' %}"></script>
 	<script src="{% static 'js/custom.js' %}"></script>
+
+
+	{% block extra-scripts %}
+	{% endblock %}
 </body>
 
 </html>

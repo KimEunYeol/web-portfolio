@@ -1,9 +1,12 @@
-from django.urls import path
-
-from .views import blog, guest_book
+from django.urls import path, re_path
+from .views import PostListView, PostDetailView, TagCloudTemplateView, TaggedObjectListView, SearchFormView
 
 
 urlpatterns = [
-    path('blog/', blog, name='blog'),
-    path('blog/guestbook', guest_book, name='guestbook'),
+    path('', PostListView.as_view(), name='post_index'),
+    path('post/', PostListView.as_view(), name='post_list'),
+    path('post/<int:pk>/', PostDetailView.as_view(), name='post_detail'),
+    path('tag/', TagCloudTemplateView.as_view(), name='tag_cloud'),
+    path('tag/<str:tag>/', TaggedObjectListView.as_view(), name='tagged_object_list'),
+    path('search/', SearchFormView.as_view(), name='search'),
 ]
