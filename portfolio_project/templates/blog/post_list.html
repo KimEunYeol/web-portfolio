@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% block blog %} active {% endblock %}
 {% load widget_tweaks %}
 {% block head %}
 <!-- Vendor Styles -->
@@ -26,8 +27,9 @@
             <div class="col-md-12">
                 <div class="about-logo">
                     <h3>My <span class="color">Blog</span></h3>
-                    <p>뭐 대충 좀 너희 회사랑 관련된 기술과 산업동향 및 개발에 필요한 것들을 일목요연하게 포스팅해줄게</p>
-                    <p>그리고 덤으로 내가 이 포트폴리오를 하면서 알게된 수많은것들도 함꼐 올려줄게</p>
+                    <p>Django로 작성된 Blog 입니다</p>
+                    <p>Tag로 게시물을 정렬할수있으며 이미지 클릭시 썸네일을 확대하여 볼수 있습니다</p>
+                    <p>최하단에서 제목과 작성자를 연관해 검색 할수 있습니다</p>
                 </div>
             </div>
         </div>
