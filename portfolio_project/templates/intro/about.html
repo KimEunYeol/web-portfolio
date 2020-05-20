@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block about %} class="active" {% endblock %}
 {% block contents %}
 {% load static %}
 <section id="inner-headline">
@@ -20,14 +21,14 @@
 				<div class="col-md-6">
 					<div class="about-text">
 						<h3>Self <span class="color">Introduce</span></h3>
-						<p>안녕하세요 이건 첫번째 문단이고 내 소개를 줄줄줄 쓸예정이에오</p>
-						<p>보다시피 이건 두번쨰 문단이고 뭘 길게 적기에는 할말이 없녜요</p>
-						<p>안녕하세요 이건 첫번째 문단이고 내 소개를 줄줄줄 쓸예정이에오</p>
-						<p>보다시피 이건 두번쨰 문단이고 뭘 길게 적기에는 할말이 없녜요</p>
-						<p>안녕하세요 이건 첫번째 문단이고 내 소개를 줄줄줄 소개를 줄줄줄 소개를 줄줄줄 소개를 줄줄줄 소개를 줄줄줄 소개를 줄줄줄 쓸예정이에오</p>
-						<p>보다시피 이건 두번쨰 문단이고 뭘 길게 적기에는 할말이 없녜요</p>
-						<p>안녕하세요 이건 첫번째 문단이고 내 소개를 줄줄줄 쓸예정이에오</p>
-						<p>보다시피 이건 두번쨰 문단이고 뭘 길게 적기에는 할말이 없녜요</p>
+						<p>안녕하세요 Django로 세상이 필요하는 서비스를 만들고싶은 개발자</p>
+						<p><h4>김은열 입니다</h4></p>
+						<p>Django로 만든 첫 개인 프로젝트가 지금 보고계신 포트폴리오 입니다</p>		
+						<p>간단히 제 이력을 보여주는것 뿐만아니라 습득한 기술을 모두 접목시켜</p>
+						<p>사용자에게 Guest Book 서비스를 제공하는 사이트를 만들었습니다</p>
+						<p>실제 서비스 한다는 마음으로 사용자들의 편리성을 고려하여</p>
+						<p>회원관리, 블로그, 방명록의 기능을 구현하였으며 파이썬 anywhere를 통해 배포하였습니다</p>
+						<p>(AWS 무료 크레딧을 다 사용하여 EC2로 배포를 중단하게 되었습니다)</p>
 					</div>
 				</div>
 			</div>
@@ -48,14 +49,14 @@
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
-										<i class="fa fa-angle-right"></i> Q1 여자친구 있어요?
+										<i class="fa fa-angle-right"></i> Q1 Django를 시작하게된 이유는?
 									</a>
 								</h4>
 							</div>
 							<div id="collapseOne-alt3" class="panel-collapse collapse">
 								<!-- Panel body -->
 								<div class="panel-body">
-									아니 없어요
+									파이썬에서 제공하는 표준 웹 라이브러리 보다 범용성 많고 쉽고 빠르게 웹 프로그래밍을 할수 있다는 것에 매력을 느껴 시작하게 되었습니다
 								</div>
 							</div>
 						</div>
@@ -63,13 +64,14 @@
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
-										<i class="fa fa-angle-right"></i> Q2 없었어요?
+										<i class="fa fa-angle-right"></i> Q2 가장 자신있는 업무 분야는?
 									</a>
 								</h4>
 							</div>
 							<div id="collapseTwo-alt3" class="panel-collapse collapse">
 								<div class="panel-body">
-									없어요
+									개발 전후 설계나 산출물에대한 문서화 작업에 가장 자신있습니다 !</br>
+									많은 공모전 경험을 통해 문서화의 중요성을 느꼈습니다
 								</div>
 							</div>
 						</div>
@@ -77,13 +79,15 @@
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-										<i class="fa fa-angle-right"></i> Q3 없었어요?
+										<i class="fa fa-angle-right"></i> Q3 개발할때 가장중요하게 생각하는것은?
 									</a>
 								</h4>
 							</div>
 							<div id="collapseThree-alt3" class="panel-collapse collapse">
 								<div class="panel-body">
-									아니 없어요 그냥
+									클린코드를 작성하는것을 가장 중요시 합니다 !</br>
+									PEP8이나 'Two scoop of django' 같이 정해진 규격이나 프레임워크의 방향성에 맞추어 개발해야만 
+									원활한 유지보수가 가능하다고 느꼈습니다 
 								</div>
 							</div>
 						</div>
@@ -91,13 +95,32 @@
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-										<i class="fa fa-angle-right"></i> Q4
+										<i class="fa fa-angle-right"></i> Q4 협업 시 나만의 소통방법은? 
 									</a>
 								</h4>
 							</div>
 							<div id="collapseFour-alt3" class="panel-collapse collapse">
 								<div class="panel-body">
-									Sample
+									팀원간 자연스럽게 서로 (겸손한?) 지적을 할수있는 분위기를 만드는 것 입니다</br>
+									감정적으로 '탓'을 하는 상황을 경계하기 위함입니다
+								</div>
+							</div>
+						</div>
+
+						<div class="panel">
+							<!-- Panel heading -->
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFive-alt3">
+										<i class="fa fa-angle-right"></i> Q5 프로젝트를 수행하면서 가장 힘들었던 점? 
+									</a>
+								</h4>
+							</div>
+							<div id="collapseFive-alt3" class="panel-collapse collapse">
+								<!-- Panel body -->
+								<div class="panel-body">
+									마감시간을 지켜내는 부분이 가장 힘들었습니다</br>
+									이번 포트폴리오를 제작하면서 완성과 디테일 사이에서 적절하게 타협해내는 것이 중요하다 느꼈습니다
 								</div>
 							</div>
 						</div>
@@ -123,9 +146,11 @@
 									<h3>Technical <span class="color">Skills</span></h3>
 									<h4 style="padding-top: 10px;margin-bottom: 10px;"><span class="color"><span
 												class="color">Front-End</span></h4>
-									<p>html 마크업 언어에 대한 이해를 하고 있으며 DOM구조에 대한 뭐 있음 그리구 css설정하는건 요즘 편집기가 좋아서 너무 꿀이야
-										js는 그냥 라이브러리 가져다와 쓰는건 하는데 직접짜는건 좀 무리야
-									</p>
+									<p>디자인의 경우 주로 무료 템플릿 사이트와 픽셀 아트 사이트를 통해 제작합니다</p>
+									<p>템플릿이 정해지면 base 템플릿을 작성하고 앱 URL에 맞게 템플릿 디렉토리를 구성합니다</p>
+									<p>페이지 내 비지니스 로직을 작성하기위해 djaogn에서 제공하는 클래스 기반뷰를 활용하며</p>
+									<p>클래스 기반뷰로 작성이 어렵거나 상당수 재정의가 필요한 경우 함수기반 뷰로 로직을 작성합니다</p>
+									<p>프레임워크 외에 웹 페이지의 세부동작을 구현하기위해 jQeary라이브러리를 사용합니다</p>
 								</div>
 							</div>
 						</div>
@@ -136,14 +161,14 @@
 								<i class="icon-info-blocks fa fa-html5"></i>
 								<div class="info-blocks-in">
 									<h3>HTML</h3>
-									<p>마크업 언어에대한 어느정도 이해가 있쥐</p>
+									<p>DOM구조에대해 이해하고 있으며 필요에 따라 클래스를 구현해 사용합니다</p>
 								</div>
 							</div>
 							<div class="col-sm-4 info-blocks">
 								<i class="icon-info-blocks fa fa-css3"></i>
 								<div class="info-blocks-in">
 									<h3>CSS</h3>
-									<p>꾸미기 재밌지</p>
+									<p>대부분 오픈소스를 활용하지만 필요에따라 custom css 작성합니다</p>
 								</div>
 							</div>
 							<div class="col-sm-4 info-blocks">
@@ -151,7 +176,7 @@
 								<i class="icon-info-blocks fa fab fa-js"></i>
 								<div class="info-blocks-in">
 									<h3>JavaScript</h3>
-									<p>스크립트 언어 어려워 그냥 갖다 쓰는게 최고야</p>
+									<p>비동기식으로 데이터를주고받을때 ajax를 활용하며 Form tag 동작을 위해 jQuery를 사용합니다</p>
 								</div>
 							</div>
 						</div>
@@ -160,9 +185,8 @@
 								<div class="about-logo">
 									<h4 style="padding-top: 10px;margin-bottom: 10px;"><span class="color"><span
 												class="color">Back-End</span></h4>
-									<p>python django로 REST ful 하게 웹페이지 만드는걸 주력으로 하고있지
-										그리고 서버사이드로 AWS와 Apache를 다루고 있구 raw SQL은 mySQL과 postGre를 하려구
-									</p>
+									<p>PostGreSQL로 데이터베이스를 구성하여 프로젝트를 수행하며 배포로 EC2 및 PythonAnywhere를 주로 사용합니다</p>
+									<p>웹 페이지내에서 사용자와 서버간의 데이터를 신속하게 주고받기위해 DRF를 활용하여 API를 구현합니다</p>
 								</div>
 							</div>
 						</div>
@@ -172,25 +196,23 @@
 								<i class="icon-info-blocks fa fab fa-python"></i>
 								<div class="info-blocks-in">
 									<h3>Python</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro
-										consequatur aliquam,
-										incidunt</p>
+									<p>텍스트 데이터 추출 및 정제를 위한 라이브러리(Numpy, Pandas) 사용경험이 있으며
+										 코딩테스트 시 Python을 사용합니다</p>
 								</div>
 							</div>
 							<div class="col-sm-4 info-blocks">
 								<i class="icon-info-blocks fa fa-database"></i>
 								<div class="info-blocks-in">
 									<h3>Database</h3>
-									<p>Mysql을 기본적으로 써왔고 DB에서 필요한 데이터를 select로 추출하는 프로시저는 작성할수있음
-										그리구 django는 postGre가 제일 호환이 좋다길래 이걸로 갈아타는중이야
-									</p>
+									<p>Mysql을 기본적으로 써왔고 DB에서 필요한 데이터를 추출하여 쿼리셋으로 만드는 프로시저를 작성 할수있습니다
+										그리고 Django에서는 PostGreSQL의 호환성이 뛰어나기 때문에 프로젝트 시 PostGre로 DB를 구성합니다									</p>
 								</div>
 							</div>
 							<div class="col-sm-4 info-blocks">
 								<i class="icon-info-blocks fa fa-aws"></i>
 								<div class="info-blocks-in">
 									<h3>AWS</h3>
-									<p>그냥 배포용으로는 사용할수있는데 다른건 좀 어렵네</p>
+									<p>EC2를 사용해 웹페이지를 배포합니다</p>
 								</div>
 							</div>
 						</div>
@@ -199,7 +221,7 @@
 								<div class="about-logo">
 									<h4 style="padding-top: 10px;margin-bottom: 10px;"><span class="color"><span
 												class="color">ETC</span></h4>
-									<p>협업툴 정도는 써야지? Git Hub이랑 영상편집을 위해 프리미어를 공부하고있어!
+									<p>개발에 필요하거나 혹은 개인적인 필요로 사용하고있는 기술들입니다 
 									</p>
 								</div>
 							</div>
@@ -210,19 +232,20 @@
 								<i class="icon-info-blocks fa fa-git-alt"></i>
 								<div class="info-blocks-in">
 									<h3>GitHub</h3>
-									<p>레포지토리 만들구 커밋하구 마스터 브랜치에서 서브브랜치 머지하고 정도는 할수있어</p>
+									<p>기본적인 레포지토리 구성과 커밋 외에 브랜치 관리 또한 활용하고 있습니다</p>
 								</div>
 							</div>
 							<div class="col-sm-4 info-blocks">
 								<i class="icon-info-blocks fa fa-photo-video"></i>
 								<div class="info-blocks-in">
 									<h3>Adobe Premiere</h3>
-									<p>영상편집해서 간단한 유튜브 동영상을 제작하고있어</p>
+									<p>포트폴리오 제작 과정을 유튜브로 만들기 위해 영상제작툴로 프리미어를 사용하고 있습니다</p>
 								</div>
 							</div>
 
 						</div>
 						<div>
+						<!--
 							<div class="block-heading-two">
 								<h4 style="padding-top: 30px;margin-bottom: 30px;"><span class="color">
 										Competency
@@ -230,7 +253,7 @@
 							</div>
 							<h6>Front-End</h6>
 							<div class="progress pb-sm">
-								<!-- White color (progress-bar-white) -->
+								
 								<div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40"
 									aria-valuemin="0" aria-valuemax="100" style="width: 40%">
 									<span class="sr-only">40% Complete (success)</span>
@@ -257,6 +280,7 @@
 									<span class="sr-only">40% Complete (success)</span>
 								</div>
 							</div>
+						-->
 						</div>
 					</div>
 					<!-- End Info Blcoks -->
@@ -272,11 +296,11 @@
 						<div class="testimonials">
 							<div class="active item">
 								<blockquote style="margin-bottom:80px; text-align:center; margin-left: 200px;margin-right: 200px;">
-									<p>적게일하고 많이벌고</p>
-									<p>김비전비전비전</p>
-									<p>비젼비젼비젼</p>
-									<p>비젼비젼비젼</p>
-									<p>비젼비젼비젼</p>
+									<p></p>
+									<p>상상하는 모든 것을 웹으로 구현하고자 합니다</p>
+									<p>당장의 실패에 좌절하지 않고 실패도 하나의 케이스로 극복해내는 개발자가 되고자 합니다</p>
+									<p>기능도 중요하지만 사용자의 용이성과 편리함을 중점으로 상업성의 방향을 찾고자 합니다</p>
+									<p></p>
 								</blockquote>
 
 								<div class="block-heading-two">
@@ -288,13 +312,13 @@
 										<img alt="" src="img/team4.jpg" class="pull-left" style="margin-left: 20px;">
 										<div class="pull-left" style="margin-right: 100px;">
 											<span class="testimonials-name">박유현 기술사(PWC)</span>
-											<span class="testimonials-post">"은열이는 참 열심히해요~"</span>
+											<span class="testimonials-post">한이음 프로젝트를 진행하면서 프로젝트 컨설팅에 대해 배울수 있었습니다</span>
 										</div>
-										<img alt="" src="img/team4.jpg" class="pull-left" style="margin-left: 20px;">
+										<!-- <img alt="" src="img/team4.jpg" class="pull-left" style="margin-left: 20px;">
 										<div class="pull-left" style="margin-right: 100px;">
 											<span class="testimonials-name">박은정 교수(UST)</span>
-											<span class="testimonials-post">"은열이는 참 잘해요~"</span>
-										</div>
+											<span class="testimonials-post">인공지능 분야에 모습에 도전정신을 본받았습니다</span>
+										</div> -->
 									</div>
 								</div>
 							</div>

@@ -1,0 +1,70 @@
+<div class="row border-top-line">
+	<div class="col-12 " style="padding-left: 10px">
+		<h4>댓글 {{ comments.count }}개</h4>
+	</div>
+</div>
+
+{% for comment in comments %}
+<!-- Reply Title Block -->
+<div class="row">
+	{% if comment.level == 0 %}
+	<div class="col-12 comment-block" data-id="{{ comment.id }}" style="margin-bottom: 0px;">
+		{% elif comment.level == 1 %}
+		<div class="col-1 center"></div>
+		<div class="col-11 comment-block " data-id="{{ comment.id }}" style="margin-bottom: 0px;">
+			{% endif %}
+			<div class="row border-top-dotted" style="margin-bottom: 0px;">
+				<div class="col-6">
+					<h4><span
+							style="padding-left: 15px">{{ comment.username.name }}</span>
+							<span>{{ comment.create_dt|date:"Y-m-d H:i:s" }}</span>
+					</h4>
+				</div>
+				<div class="col-6 right" style="margin-right: 15px;">
+					<form action="" method="POST" data-type="comment_delete" data-id="{{ comment.id }}">
+						<input type="hidden" name="comment_id" value="{{ comment.id }}" />
+						{% csrf_token %}
+						<p>
+							{% if comment.level == 0 %}
+							<span style="cursor:pointer" onClick="commentClick({{ comment.id }})">
+								<i class="icon-info-blocks material-icons">rate_review</i></span>
+							{% endif %}
+
+							{% if comment.username == user %}
+							<span style="cursor:pointer" onClick="commentModifyClick({{ comment.id }})">
+								<i class="icon-info-blocks material-icons">build</i></span>
+							<span style="cursor:pointer"
+								onClick="commentDeleteClick({{ comment.id }}, {{ comment.guestbook_post.id }})">
+								<i class="icon-info-blocks material-icons">delete</i></span>
+							{% endif %}
+						</p>
+					</form>
+				</div>
+			</div>
+			<!-- Reply Content Block -->
+			<div class="row border-bottom-dotted" style="padding-left: 20px;">
+				<div class="col-12 view-content-comm">
+					{{ comment.content }}
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Reply Write Block -->
+	{% if user.username and comment.level == 100 %}
+	<div class="comment-reply" data-id="{{ comment.id }}">
+		<div class="write-box" background-color="white">
+			<form action="" method="POST" data-type="comment-reply" data-id="{{ comment.id }}">
+				<input type="hidden" name="level" value="1" />
+				<input type="hidden" name="id" value="{{ comment.reference_comment_id }}" />
+				{% csrf_token %}
+				<div class="row height-080 center">
+					<div class="col-11"><textarea name="content" class="form-width-90"></textarea></div>
+					<div class="col-1"><input type="button"
+							onClick="commentReplySend({{ comment.reference_comment_id }}, {{ comment.guestbook_post.id }})"
+							value="댓글 등록" class="form-width-90" /></div>
+				</div>
+			</form>
+		</div>
+	</div>
+	{% endif %}
+	{% endfor %}
