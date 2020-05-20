@@ -1,5 +1,74 @@
-{% extends "base.html" %}
-{% block contents %}
+{% extends "base_simple.html" %}
+{% load widget_tweaks %}
 {% load static %}
-sign up
+{% block contents %}
+<div class="container">
+    <div class="row">
+        <img class="img-user" src="{% static 'img/sign up-2.png' %}" alt="">
+        <div class="col-md-12">
+            <div class="about-logo">
+                <h3>Sign<span class="color"> Up</span></h3>
+                <p>회원가입을 진행한 사용자에 한해서 방명록 작성, 좋아요, 댓글 작성 권한을 제공합니다</p>
+                <p>사용자 정보는 Django에서 제공하는 model을 상속받아 AbstractBaseUser로 재정의 하였으며</p>
+                <p>CRSF Token을 사용하여 비밀번호를 암호화 하여 관리합니다</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div>
+            <!-- Form itself -->
+            <form name="register_form" id="register_form" action="{% url 'signup_result' %}" method="post" novalidate>
+                <div class="input-field">
+                    {% csrf_token %}
+                    <input type="hidden" name="phone" id="phone" value="" />
+                    <input type="hidden" name="email" id="email" value="" />
+
+                    <input type="text" name="username" class="form-control" id="username" />
+                    <label for="username" class=""> ID </label>
+                    <input type="button" value="중복확인" onClick="idCheck()"
+                        class="btn btn-primary waves-effect waves-dark pull-right" />
+                    <p class="help-block"><span id="idcheck-result"></span></p>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" class="form-control" name="password" id="password" value="" required
+                        data-validation-required-message="최소 8글자 이상 입력해 주세요" />
+                    <label for="password" class=""> Password </label>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" class="form-control" name="password_check" value="" id="password_check"
+                        required data-validation-required-message="Password를 확인해주세요" />
+                    <label for="password_check" class=""> Password 확인 </label>
+                </div>
+
+                <div class="input-field">
+                    <input type="email" class="form-control" name="name" id="name" value="" required
+                        data-validation-required-message="Please enter your email" />
+                    <label for="name" class=""> Name </label>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" class="form-control" name="email" id="email" value="" required
+                        data-validation-required-message="Please enter your email" />
+                    <label for="email" class=""> Email </label>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" class="form-control" name="phone" id="phone" value="" required
+                        data-validation-required-message="Please enter your phone number" />
+                    <label for="phone" class=""> Phone </label>
+                    <p class="help-block"> '-'를 제외하고 숫자만 입력해주세요</p>
+                </div>
+
+                <input type="button" class="btn btn-primary waves-effect waves-dark pull-right" value="가입하기"
+                    onClick="userRegister()" />
+            </form>
+        </div>
+    </div>
+</div>
+{% block extra-scripts %}
+<script src="{% static 'js/user.js' %}"></script>
+{% endblock %}
 {% endblock %}

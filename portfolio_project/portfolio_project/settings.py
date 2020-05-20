@@ -25,7 +25,7 @@ SECRET_KEY = '6%v$l7ryn82-b!-=w6p$#)*v3i56m)l5_3ww1my-^)ktfn!s6)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kimeunyeol.pythonanywhere.com', '*']
 
 
 # Application definition
@@ -43,6 +43,11 @@ INSTALLED_APPS += [
     'user',
     'blog',
     'demo',
+    'guestbook',
+
+    'taggit',
+    'taggit_templatetags2',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -86,8 +91,14 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'web portfolio',
+        'USER': 'General User',
+        'PASSWORD': 'admin',
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
     }
 }
 
@@ -127,17 +138,28 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
 STATIC_URL = '/static/'
-
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
-
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
+# img 파일 처리를 위한 경로설정
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 MEDIA_URL = '/media/'
+
+
+# User 및 Login/out 시 경로 설정 변수
+AUTH_USER_MODEL = 'user.User'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+# Tag 패키지 상용을 위한 환경변수 설정
+TAGGIT_CASE_INSENSITIVE = True
+TAGGIT_LIMIT = 50
+
+# 댓글 사용을 위한 DISQUS 환경변수 설정
+# 새로운 도메인을 할당받거나 DNS를 이용할경우 변경해줘야한다
+DISQUS_SHORTNAME = 'kimeunyeol-website'
+DISQUS_MY_DOMAIN = 'http://127.0.0.1:8000/'

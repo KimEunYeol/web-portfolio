@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block contents %}
+{% load static %}
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="pageTitle">KEY's Blog</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<a href="{% url 'main' %}"><img class="img-user" src="{% static 'img/guestbook.png' %}" alt=""></a>
+{% endblock %}

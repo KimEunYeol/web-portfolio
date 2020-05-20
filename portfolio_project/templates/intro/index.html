@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block intro %} class="active" {% endblock %}
 {% block contents %}
 {% load static %}
 <!-- Slider -->
@@ -21,15 +22,15 @@
 		<li>
 			<img src="{% static 'img/slides/1.jpg' %}" alt="" />
 			<div class="flex-caption">
-				<h3>Clean Code를 위해 테스트 주도 개발을 지향합니다</h3>
-				<h4>Build web applications using Python Django</h4>
+				<h3>PostgreSQL DB를 연동하여 회원 및 게시글 데이터를 운용합니다</h3>
+				<h4>Operate members and post data in conjunction with PostgreDB</h4>
 			</div>
 		</li>
 		<li>
 			<img src="{% static 'img/slides/2.jpg' %}" alt="" />
 			<div class="flex-caption">
-				<h3>클라우드 플랫폼과 인공지능 개발 플랫폼에 관심을 갖고 있습니다</h3>
-				<h4>Build web applications using Python Django</p>
+				<h3>AbstractBaseUser를 사용하여 회원관리를 구현하였습니다</h3>
+				<h4>User management was implemented using AbstractBaseUser</p>
 			</div>
 		</li>
 	</ul>
@@ -42,9 +43,11 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="aligncenter">
-					<h2 class="aligncenter">ABOUT ME</h2>안녕하세요 <br />이 쓉새들아
+					<h2 class="aligncenter">ABOUT ME</h2>안녕하세요 <br />Python Django 웹 개발자 김은열입니다 :) 
 				</div>
-				<br />
+				<br/>
+				<br/>
+				<br/>
 			</div>
 		</div>
 
@@ -54,15 +57,12 @@
 					<div class="card-image">
 
 						<img class="img-responsive" src="{% static 'img/note_taking.png' %}" alt="">
-						<span class="card-title">Vision</span>
+						<span class="card-title">Resume</span>
 					</div>
 					<div class="card-content">
-						<p>
-							내 이력을 좀 쳐봐
-						</p>
-						<p>
-							느그 회사에 들어갈수 있을지 없을지 아직 감이 안와?
-						</p>
+						<p>간단한 이력과</p>
+						<p>python django 개발을 시작한 이유와 </p>
+						<p>개발자로써 가지고있는 비전에대해 소개합니다!</p>
 					</div>
 				</div>
 			</div>
@@ -73,12 +73,8 @@
 						<span class="card-title">Self Interview</span>
 					</div>
 					<div class="card-content">
-						<p>
-							그 예전에 많이 하던 100문 100답 같은거 해줄게
-						</p>
-						<p>
-							너도 좋지?
-						</p>
+						<p>간단한 질의 응답으로</p>
+						<p>개발자 김은열을 소개하려 합니다!</p>
 					</div>
 				</div>
 			</div>
@@ -89,12 +85,9 @@
 						<span class="card-title">Technical Skills</span>
 					</div>
 					<div class="card-content">
-						<p>
-							백엔드는 대강 mysql, postgre 할줄 알고 apach조금 만지구
-						</p>
-						<p>
-							요즘 AWS랑 docker 쓰려고 노력중이야 그리구 하둡도 할껀데 배울게 왜이래 많냐 시발
-						</p>
+						<p>프로젝트와 공모전을 통해 습득한</p>
+						<p>기술스택과 숙련도를 알려드립니다</p>
+						
 					</div>
 				</div>
 			</div>
@@ -108,8 +101,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="aligncenter">
-						<h2 class="aligncenter">PROJECT</h2>여태까지 내가 비볐던 공모전이랑 프로젝트를 알려줄게
-						<br />생각보다 많아서 다보려면 하루가 훌쩍 넘어갈걸?
+						<h2 class="aligncenter">PROJECT</h2>공모전과 대외활동을 통해 수행한 프로젝트입니다
+						<br />간략하게 요약하여 소개합니다!
 					</div>
 					<br />
 				</div>
@@ -121,21 +114,22 @@
 					<i class="icon-info-blocks material-icons">local_parking</i>
 					<div class="info-blocks-in">
 						<h3>Python Django</h3>
-						<p>독학으로 늦게 배워 공모전 나갈 시간이 없었어 그래서 이게 내 첫번째 프로젝트야</p>
+						<p>파이썬으로 프로젝트를 중 서비스에대한 고민을 하다 django를 접하게 되었고 독학 후 첫 프로젝트로 웹 포트폴리오를 제작 하였습니다 </p>
 					</div>
 				</div>
 				<div class="col-sm-4 info-blocks">
 					<i class="icon-info-blocks material-icons">lightbulb_outline</i>
 					<div class="info-blocks-in">
 						<h3>사물인터넷</h3>
-						<p>랩실애들이랑 핸드리모트컨트롤러 뚝딱 만들었는데 상을 2개나 탔어 개꿀이였지</p>
+						<p>신체에 착용하는 부가적인 장비 없이 멀리 있는 가전을 직접 움직이지 않고 편리하게
+							제어할 수 있는 RGB-D 카메라를 활용한 손 동작 인식과 딥러닝 기반 IoT 장치 컨트롤 시스템 제작 하였습니다</p>
 					</div>
 				</div>
 				<div class="col-sm-4 info-blocks">
 					<i class="icon-info-blocks material-icons">streetview</i>
 					<div class="info-blocks-in">
 						<h3>인공지능</h3>
-						<p>동국대가서 한여름에 개뺑이 까고왔는데 후회도 많고 배운것도 많았어</p>
+						<p>동국대 청년 데이터 캠퍼스에서 수행한 프로젝트로 웹툰 댓글의 댓글을 분석하여 웹툰 기획자와 웹툰 플랫폼의 분석 툴을 제공하는 웹 페이지를 구현 하였습니다</p>
 					</div>
 				</div>
 			</div>
@@ -144,21 +138,21 @@
 					<i class="icon-info-blocks material-icons">assessment</i>
 					<div class="info-blocks-in">
 						<h3>빅데이터</h3>
-						<p>이거 사실 졸업한 내친구한테 그대로 받아서 리팩토링한거야 그래서 잘몰라</p>
+						<p>Data.go.kr에서 제공하는 상권데이터를 활용하여 예비 창업자에게 필요한 정보를 제공하는 웹 페이지를 구현 하였습니다</p>
 					</div>
 				</div>
 				<div class="col-sm-4 info-blocks">
 					<i class="icon-info-blocks material-icons">monetization_on</i>
 					<div class="info-blocks-in">
 						<h3>블록체인</h3>
-						<p>비트코인하다가 많이 잃었지? 나는 진로를 잃었었어 시2발</p>
+						<p>이더리움을 스마트컨트랙트로 설문조사의 신빙성과 투명성을 증대한 웹 설문조사 플랫폼을 제작 하였습니다</p>
 					</div>
 				</div>
 				<div class="col-sm-4 info-blocks">
 					<i class="icon-info-blocks material-icons">line_style</i>
 					<div class="info-blocks-in">
 						<h3>공공데이터</h3>
-						<p>한국정보화진흥원알아? NIS 거기서 방학때 공공데이터로 앱만들었엉</p>
+						<p>한국정보화진흥원에서 주최한 교육 프로그램에 참여하여 공공데이터를 활용해 지역특산물 소개 및 공영주차장 잔여석 확인 네이티브 앱을 제작 하였습니다</p>
 					</div>
 				</div>
 			</div>
@@ -174,26 +168,26 @@
 			<div class="col-md-12">
 				<div class="section-title text-center">
 					<h2>BLOG</h2>
-					<p>이건 필수지 django로 블로그나 쇼핑몰 못만들면 안되잖어<br>대략 너희가 필수요건에 적어놓은거 공부한 내용 포스팅할려구</p>
+					<p>이미지와 Tag를 포함한 게시글을 포스팅할수 있는 블로그를 구현하였습니다 
+						<br> Tag로 게시글을 정렬할수 있고 업로드된 이미지의 썸네일을 리스트에서 확대하여 볼수있습니다
+					</p>
+				</br>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-sm-6">
 				<div class="about-text">
-					<p>django를 활용해서 Blog를 만들고 회원가입 시에 포스팅 할수 있는 권한을 줄수 있게 만들려 생각중이야
-						이미지 업로드도 할수있게 만들거야
-						그리고 RESTful API로 blog data를 비동기적으로 처리할수 있게 만들어줄게
-						어때 맘에들지?
-					</p>
-
+					<p>RESTful API로 blog data를 비동기적으로 처리할수 있습니다</p>
+					<p>사용자에게 제공하는 게시판으로는 Guest Book이 있습니다</p>
+					<p>자유롭게 방명록을 남겨주세요~</p>
 					<ul class="withArrow">
-						<li><span class="fa fa-angle-right"></span> 최근 글 1_TITLE </li>
-						<li><span class="fa fa-angle-right"></span> 최근 글 2_TITLE </li>
-						<li><span class="fa fa-angle-right"></span> 최근 글 3_TITLE </li>
-						<li><span class="fa fa-angle-right"></span> 최근글이 링크로 걸리는 기능을 만들고 싶어 </li>
+						<li><span class="fa fa-angle-right"></span> API를 구현하기위해 DRF를 활용하였습니다 </li>
+						<li><span class="fa fa-angle-right"></span> Tag 기능은 django에서 제공하는 taggit을 사용하였습니다</li>
+						<li><span class="fa fa-angle-right"></span> 댓글 기능을 위해 DISQUS 에서 제공하는 API를 사용하였습니다 </li>
+						<li><span class="fa fa-angle-right"></span> 제목과 작성자 키워드를 기반으로 게시글 검색이 가능합니다 </li>
 					</ul>
-					<a href="{% url 'blog' %}" class="btn btn-primary waves-effect waves-dark">More.. </a>
+					<a href="{% url 'post_list' %}" class="btn btn-primary waves-effect waves-dark">More.. </a>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6">

@@ -1840,3 +1840,10 @@ span.color {
 .alert-danger { 
     float: left;
 }
+
+#img-user{
+	display: block;
+    max-width: 60%;
+    height: auto;
+    margin: 0px auto;
+}

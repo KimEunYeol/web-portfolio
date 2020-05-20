@@ -1,0 +1,25 @@
+<div class="row border-top-line">
+	<div class="col-12"><h2>{{ object.title }}</h2></div>
+</div>
+<div class="row border-bottom-line">
+	<div class="col-6"><h4><span style="padding-right: 30px">{{ object.username.name }}</span><span>{{ object.create_dt|date:"Y-m-d H:i:s" }}</span></h4></div>
+	<div class="col-6 right">
+		{% if object.username == user %}
+			<form action="{% url 'guestbook_delete_result' %}" method="POST" data-id="{{ object.id }}">
+			<input type="hidden" name="guestbook_post_id" value="{{ object.id }}" />
+			{% csrf_token %}
+			<p>
+			<span style="cursor:pointer" onClick="modifyClick({{ object.id }})"><i class="icon-info-blocks material-icons">build</i></span>
+			&nbsp;
+			<span style="cursor:pointer" onClick="deleteClick({{ object.id }})"><i class="icon-info-blocks material-icons">delete</i></span>
+			</p>
+			</form>
+		{% endif %}
+	</div>
+</div>
+<div class="row">
+	<div class="col-12 view-content-comm">
+		<p>{{ object.content }}</p>
+		{% if object.image %}<img style="max-width: 100%; margin-bottom:30px;" class="page-object" src="{{ object.image.url }}" />{% endif %}
+	</div>
+</div>
